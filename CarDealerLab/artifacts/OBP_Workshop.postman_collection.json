@@ -1,0 +1,1438 @@
+{
+	"info": {
+		"_postman_id": "18b1624d-042c-4c39-863d-b57bcd8e33c4",
+		"name": "OBP_Workshop",
+		"description": "Oracle Blockchain Hands-on Workshop\nLedger 초기화 Script",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "initVehiclePart1",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c05a9d6f-b9de-4b2b-a2d3-a5c4bb21e5bc",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "16ff96f0-e893-4951-8e32-5780c25c9536",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{cloudpwd}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{cloudaccount}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"chaincode\":\"{{CC_NAME}}\",\n\t\"args\":[\"initVehiclePart\", \"abg1234\", \"panama-parts\", \"1502688979\", \"airbag 2020\", \"{{MANU_NAME}}\", \"false\", \"1502688979\"],\n\t\"chaincodeVer\":\"{{CC_VERSION}}\"\n}"
+				},
+				"url": {
+					"raw": "https://{{resturl}}/api/v2/channels/{{DEALER_A_CHANNEL}}/transactions",
+					"protocol": "https",
+					"host": [
+						"{{resturl}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"channels",
+						"{{DEALER_A_CHANNEL}}",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "initVehiclePart2",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c05a9d6f-b9de-4b2b-a2d3-a5c4bb21e5bc",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "16ff96f0-e893-4951-8e32-5780c25c9536",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{cloudpwd}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{cloudaccount}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"chaincode\":\"{{CC_NAME}}\",\n\t\"args\":[\"initVehiclePart\",\"abg1235\", \"panama-parts\", \"1502688979\", \"airbag 4050\", \"{{MANU_NAME}}\", \"false\", \"1502688979\"],\n\t\"chaincodeVer\":\"{{CC_VERSION}}\"\n}"
+				},
+				"url": {
+					"raw": "https://{{resturl}}/api/v2/channels/{{DEALER_A_CHANNEL}}/transactions",
+					"protocol": "https",
+					"host": [
+						"{{resturl}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"channels",
+						"{{DEALER_A_CHANNEL}}",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "initVehiclePart3",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c05a9d6f-b9de-4b2b-a2d3-a5c4bb21e5bc",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "16ff96f0-e893-4951-8e32-5780c25c9536",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{cloudpwd}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{cloudaccount}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"chaincode\":\"{{CC_NAME}}\",\n\t\"args\":[\"initVehiclePart\",\"ser1236\", \"panama-parts\", \"1502688979\", \"seatbelt 10020\", \"{{MANU_NAME}}\", \"false\", \"1502688979\"],\n\t\"chaincodeVer\":\"{{CC_VERSION}}\"\n}"
+				},
+				"url": {
+					"raw": "https://{{resturl}}/api/v2/channels/{{DEALER_A_CHANNEL}}/transactions",
+					"protocol": "https",
+					"host": [
+						"{{resturl}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"channels",
+						"{{DEALER_A_CHANNEL}}",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "initVehiclePart4",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c05a9d6f-b9de-4b2b-a2d3-a5c4bb21e5bc",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "16ff96f0-e893-4951-8e32-5780c25c9536",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{cloudpwd}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{cloudaccount}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"chaincode\":\"{{CC_NAME}}\",\n\t\"args\":[\"initVehiclePart\",\"win1237\", \"panama-parts\", \"1502688979\", \"windshield auto201\", \"{{MANU_NAME}}\", \"false\", \"1502688979\"],\n\t\"chaincodeVer\":\"{{CC_VERSION}}\"\n}"
+				},
+				"url": {
+					"raw": "https://{{resturl}}/api/v2/channels/{{DEALER_A_CHANNEL}}/transactions",
+					"protocol": "https",
+					"host": [
+						"{{resturl}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"channels",
+						"{{DEALER_A_CHANNEL}}",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "initVehiclePart5",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c05a9d6f-b9de-4b2b-a2d3-a5c4bb21e5bc",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "16ff96f0-e893-4951-8e32-5780c25c9536",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{cloudpwd}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{cloudaccount}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"chaincode\":\"{{CC_NAME}}\",\n\t\"args\":[\"initVehiclePart\",\"bra1238\", \"panama-parts\", \"1502688979\", \"bobs-bits\", \"{{MANU_NAME}}\", \"false\", \"1502688979\"],\n\t\"chaincodeVer\":\"{{CC_VERSION}}\"\n}"
+				},
+				"url": {
+					"raw": "https://{{resturl}}/api/v2/channels/{{DEALER_A_CHANNEL}}/transactions",
+					"protocol": "https",
+					"host": [
+						"{{resturl}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"channels",
+						"{{DEALER_A_CHANNEL}}",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transferVehiclePart1",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c05a9d6f-b9de-4b2b-a2d3-a5c4bb21e5bc",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "16ff96f0-e893-4951-8e32-5780c25c9536",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{cloudpwd}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{cloudaccount}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"chaincode\":\"{{CC_NAME}}\",\n\t\"args\":[\"transferVehiclePart\",\"bra1238\", \"{{MANU_NAME}}\", \"{{DEALER_A_NAME}}\"],\n\t\"chaincodeVer\":\"{{CC_VERSION}}\"\n}"
+				},
+				"url": {
+					"raw": "https://{{resturl}}/api/v2/channels/{{DEALER_A_CHANNEL}}/transactions",
+					"protocol": "https",
+					"host": [
+						"{{resturl}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"channels",
+						"{{DEALER_A_CHANNEL}}",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transferVehiclePart2",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c05a9d6f-b9de-4b2b-a2d3-a5c4bb21e5bc",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "16ff96f0-e893-4951-8e32-5780c25c9536",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{cloudpwd}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{cloudaccount}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"chaincode\":\"{{CC_NAME}}\",\n\t\"args\":[\"transferVehiclePart\", \"win1237\", \"{{MANU_NAME}}\", \"{{DEALER_A_NAME}}\"],\n\t\"chaincodeVer\":\"{{CC_VERSION}}\"\n}"
+				},
+				"url": {
+					"raw": "https://{{resturl}}/api/v2/channels/{{DEALER_A_CHANNEL}}/transactions",
+					"protocol": "https",
+					"host": [
+						"{{resturl}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"channels",
+						"{{DEALER_A_CHANNEL}}",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transferVehiclePart3",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c05a9d6f-b9de-4b2b-a2d3-a5c4bb21e5bc",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "16ff96f0-e893-4951-8e32-5780c25c9536",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{cloudpwd}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{cloudaccount}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"chaincode\":\"{{CC_NAME}}\",\n\t\"args\":[\"transferVehiclePart\", \"ser1236\", \"{{MANU_NAME}}\", \"{{DEALER_A_NAME}}\"],\n\t\"chaincodeVer\":\"{{CC_VERSION}}\"\n}"
+				},
+				"url": {
+					"raw": "https://{{resturl}}/api/v2/channels/{{DEALER_A_CHANNEL}}/transactions",
+					"protocol": "https",
+					"host": [
+						"{{resturl}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"channels",
+						"{{DEALER_A_CHANNEL}}",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "initVehicle1",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c05a9d6f-b9de-4b2b-a2d3-a5c4bb21e5bc",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "16ff96f0-e893-4951-8e32-5780c25c9536",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{cloudpwd}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{cloudaccount}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"chaincode\":\"{{CC_NAME}}\",\n\t\"args\":[\"initVehicle\", \"dtrt10001\", \"{{MANU_NAME}}\", \"a coupe\", \"1502688979\", \"abg1235\", \"{{MANU_NAME}}\", \"false\", \"1502688979\"],\n\t\"chaincodeVer\":\"{{CC_VERSION}}\"\n}"
+				},
+				"url": {
+					"raw": "https://{{resturl}}/api/v2/channels/{{DEALER_A_CHANNEL}}/transactions",
+					"protocol": "https",
+					"host": [
+						"{{resturl}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"channels",
+						"{{DEALER_A_CHANNEL}}",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "initVehicle2",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c05a9d6f-b9de-4b2b-a2d3-a5c4bb21e5bc",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "16ff96f0-e893-4951-8e32-5780c25c9536",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{cloudpwd}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{cloudaccount}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"chaincode\":\"{{CC_NAME}}\",\n\t\"args\":[\"initVehicle\",\"dtrt10002\", \"{{MANU_NAME}}\", \"big pickup\", \"1502688979\", \"abg1234\", \"{{MANU_NAME}}\", \"false\", \"1502688979\"],\n\t\"chaincodeVer\":\"{{CC_VERSION}}\"\n}"
+				},
+				"url": {
+					"raw": "https://{{resturl}}/api/v2/channels/{{DEALER_A_CHANNEL}}/transactions",
+					"protocol": "https",
+					"host": [
+						"{{resturl}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"channels",
+						"{{DEALER_A_CHANNEL}}",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transferPartToVehicle1",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c05a9d6f-b9de-4b2b-a2d3-a5c4bb21e5bc",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "16ff96f0-e893-4951-8e32-5780c25c9536",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{cloudpwd}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{cloudaccount}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"chaincode\":\"{{CC_NAME}}\",\n\t\"args\":[\"transferPartToVehicle\", \"abg1235\", \"dtrt10001\"],\n\t\"chaincodeVer\":\"{{CC_VERSION}}\"\n}"
+				},
+				"url": {
+					"raw": "https://{{resturl}}/api/v2/channels/{{DEALER_A_CHANNEL}}/transactions",
+					"protocol": "https",
+					"host": [
+						"{{resturl}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"channels",
+						"{{DEALER_A_CHANNEL}}",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transferPartToVehicle2",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c05a9d6f-b9de-4b2b-a2d3-a5c4bb21e5bc",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "16ff96f0-e893-4951-8e32-5780c25c9536",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{cloudpwd}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{cloudaccount}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"chaincode\":\"{{CC_NAME}}\",\n\t\"args\":[\"transferPartToVehicle\", \"abg1234\", \"dtrt10002\"],\n\t\"chaincodeVer\":\"{{CC_VERSION}}\"\n}"
+				},
+				"url": {
+					"raw": "https://{{resturl}}/api/v2/channels/{{DEALER_A_CHANNEL}}/transactions",
+					"protocol": "https",
+					"host": [
+						"{{resturl}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"channels",
+						"{{DEALER_A_CHANNEL}}",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transferVehicle1",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c05a9d6f-b9de-4b2b-a2d3-a5c4bb21e5bc",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "16ff96f0-e893-4951-8e32-5780c25c9536",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{cloudpwd}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{cloudaccount}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"chaincode\":\"{{CC_NAME}}\",\n\t\"args\":[\"transferVehicle\", \"dtrt10001\", \"{{MANU_NAME}}\", \"{{DEALER_A_NAME}}\"],\n\t\"chaincodeVer\":\"{{CC_VERSION}}\"\n}"
+				},
+				"url": {
+					"raw": "https://{{resturl}}/api/v2/channels/{{DEALER_A_CHANNEL}}/transactions",
+					"protocol": "https",
+					"host": [
+						"{{resturl}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"channels",
+						"{{DEALER_A_CHANNEL}}",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transferVehicle2",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c05a9d6f-b9de-4b2b-a2d3-a5c4bb21e5bc",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "16ff96f0-e893-4951-8e32-5780c25c9536",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{cloudpwd}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{cloudaccount}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"chaincode\":\"{{CC_NAME}}\",\n\t\"args\":[\"transferVehicle\", \"dtrt10002\", \"{{MANU_NAME}}\", \"{{DEALER_A_NAME}}\"],\n\t\"chaincodeVer\":\"{{CC_VERSION}}\"\n}"
+				},
+				"url": {
+					"raw": "https://{{resturl}}/api/v2/channels/{{DEALER_A_CHANNEL}}/transactions",
+					"protocol": "https",
+					"host": [
+						"{{resturl}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"channels",
+						"{{DEALER_A_CHANNEL}}",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create 5 parts for Jude Dealership1",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c05a9d6f-b9de-4b2b-a2d3-a5c4bb21e5bc",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "16ff96f0-e893-4951-8e32-5780c25c9536",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{cloudpwd}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{cloudaccount}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"chaincode\":\"{{CC_NAME}}\",\n\t\"args\":[\"initVehiclePart\", \"abg1239\", \"bobs-bits\", \"1502688979\", \"airbag w020\", \"{{MANU_NAME}}\", \"false\", \"1502688979\"],\n\t\"chaincodeVer\":\"{{CC_VERSION}}\"\n}"
+				},
+				"url": {
+					"raw": "https://{{resturl}}/api/v2/channels/{{DEALER_B_CHANNEL}}/transactions",
+					"protocol": "https",
+					"host": [
+						"{{resturl}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"channels",
+						"{{DEALER_B_CHANNEL}}",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create 5 parts for Jude Dealership2",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c05a9d6f-b9de-4b2b-a2d3-a5c4bb21e5bc",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "16ff96f0-e893-4951-8e32-5780c25c9536",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{cloudpwd}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{cloudaccount}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"chaincode\":\"{{CC_NAME}}\",\n\t\"args\":[\"initVehiclePart\", \"abg1240\", \"bobs-bits\", \"1502688979\", \"airbag w030\", \"{{MANU_NAME}}\", \"false\", \"1502688979\"],\n\t\"chaincodeVer\":\"{{CC_VERSION}}\"\n}"
+				},
+				"url": {
+					"raw": "https://{{resturl}}/api/v2/channels/{{DEALER_B_CHANNEL}}/transactions",
+					"protocol": "https",
+					"host": [
+						"{{resturl}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"channels",
+						"{{DEALER_B_CHANNEL}}",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create 5 parts for Jude Dealership3",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c05a9d6f-b9de-4b2b-a2d3-a5c4bb21e5bc",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "16ff96f0-e893-4951-8e32-5780c25c9536",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{cloudpwd}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{cloudaccount}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"chaincode\":\"{{CC_NAME}}\",\n\t\"args\":[\"initVehiclePart\", \"whl1241\", \"wizzard-auto\", \"1502688979\", \"wheel 28374\", \"{{MANU_NAME}}\", \"false\", \"1502688979\"],\n\t\"chaincodeVer\":\"{{CC_VERSION}}\"\n}"
+				},
+				"url": {
+					"raw": "https://{{resturl}}/api/v2/channels/{{DEALER_B_CHANNEL}}/transactions",
+					"protocol": "https",
+					"host": [
+						"{{resturl}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"channels",
+						"{{DEALER_B_CHANNEL}}",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create 5 parts for Jude Dealership4",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c05a9d6f-b9de-4b2b-a2d3-a5c4bb21e5bc",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "16ff96f0-e893-4951-8e32-5780c25c9536",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{cloudpwd}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{cloudaccount}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"chaincode\":\"{{CC_NAME}}\",\n\t\"args\":[\"initVehiclePart\", \"win1242\", \"panama-parts\", \"1502688979\", \"windshield auto201\", \"{{MANU_NAME}}\", \"false\", \"1502688979\"],\n\t\"chaincodeVer\":\"{{CC_VERSION}}\"\n}"
+				},
+				"url": {
+					"raw": "https://{{resturl}}/api/v2/channels/{{DEALER_B_CHANNEL}}/transactions",
+					"protocol": "https",
+					"host": [
+						"{{resturl}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"channels",
+						"{{DEALER_B_CHANNEL}}",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create 5 parts for Jude Dealership5",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c05a9d6f-b9de-4b2b-a2d3-a5c4bb21e5bc",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "16ff96f0-e893-4951-8e32-5780c25c9536",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{cloudpwd}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{cloudaccount}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"chaincode\":\"{{CC_NAME}}\",\n\t\"args\":[\"initVehiclePart\", \"sen1243\", \"wizzard-auto\", \"1502688979\", \"sensor p228\", \"{{MANU_NAME}}\", \"false\", \"1502688979\"],\n\t\"chaincodeVer\":\"{{CC_VERSION}}\"\n}"
+				},
+				"url": {
+					"raw": "https://{{resturl}}/api/v2/channels/{{DEALER_B_CHANNEL}}/transactions",
+					"protocol": "https",
+					"host": [
+						"{{resturl}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"channels",
+						"{{DEALER_B_CHANNEL}}",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query Vehicle by OwnerName",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c05a9d6f-b9de-4b2b-a2d3-a5c4bb21e5bc",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "16ff96f0-e893-4951-8e32-5780c25c9536",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{cloudpwd}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{cloudaccount}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"chaincode\":\"carTrace\",\n\t\"args\":[\"queryVehicleByOwner\", \"car1\"],\n\t\"chaincodeVer\":\"v1\"\n}"
+				},
+				"url": {
+					"raw": "https://{{resturl}}/api/v2/channels/{{DEALER_A_CHANNEL}}/chaincode-queries",
+					"protocol": "https",
+					"host": [
+						"{{resturl}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"channels",
+						"{{DEALER_A_CHANNEL}}",
+						"chaincode-queries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query Vehicle",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c05a9d6f-b9de-4b2b-a2d3-a5c4bb21e5bc",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "16ff96f0-e893-4951-8e32-5780c25c9536",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{cloudpwd}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{cloudaccount}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"chaincode\":\"carTrace\",\n\t\"args\":[\"getHistoryForRecord\", \"dtrt10001\"]\n}"
+				},
+				"url": {
+					"raw": "https://{{resturl}}/api/v2/channels/{{DEALER_A_CHANNEL}}/chaincode-queries",
+					"protocol": "https",
+					"host": [
+						"{{resturl}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"channels",
+						"{{DEALER_A_CHANNEL}}",
+						"chaincode-queries"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
