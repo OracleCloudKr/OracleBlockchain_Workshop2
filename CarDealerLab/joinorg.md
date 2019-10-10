@@ -4,15 +4,13 @@
 먼저 **JudeDealer** 의 콘솔에 접속하기 위해 아래 그림과 같이 Service Console 을 엽니다.
 ![](images/goto_judedealer.png)
 
-2. Founder는 Participant Org의 두 가지 정보가 필요합니다. 첫째는 참가하는 Org를 검증 하기 위한 인증서가 필요하고, 두번째는 Org에서 관리하는 피어 노드에 대한 정보입니다.<br/>
-Participant의 인증서를 가져오기 위해 Participant Org의 콘솔(**JudeDealer 콘솔**)을 엽니다. 
-![](images/judedealer_main.png)
-
-3. **Export** 버튼을 눌러 **JudeDealer-certificates.json** 파일을 서버로 부터 로컬 컴퓨터에 다운로드 합니다.
-다음 단계는 접속하고자 하는 Founder의 Orderer 정보를 import 해야 합니다. **Import Orderer Settings**를 클릭합니다.
+1. 중앙에 있는 2번 'Export Certificates' 를 클릭한 후에 오른쪽 하단의 **Export** 버튼을 눌러 **JudeDealer-certificates.json** 파일을 서버로 부터 로컬 컴퓨터에 다운로드 합니다. 이 파일에는 Participant Org의 인증서와 관리하는 피어 노드에 대한 정보가 들어 있습니다.<br/>
 ![](images/judedealer_join1.png)
 
-4. 다시 Blockchain Platform Manager 콘솔에서 DetroitAuto 인스턴스 콘솔에 접속합니다.
+1. 다음 단계는 접속하고자 하는 Founder의 Orderer 정보를 import 해야 합니다. **Import Orderer Settings**를 클릭합니다.
+![](images/judedealer_join12.png)
+
+4. Blockchain Platform Manager 콘솔에서 DetroitAuto 인스턴스 콘솔에 접속합니다.
 ![](images/goto_founder.png)
 
 5. **DetroitAuto** Founder 조직의 콘솔로 이동해서 **네트워크** 탭을 선택하십시오. 그런 다음 **DetroitAuto** 조직의 햄버거 메뉴를 클릭하여 Orderer 설정파일을(DetroitAuto-orderer-settings.json) 내보냅니다. 내보낸 파일을 저장하십시오.

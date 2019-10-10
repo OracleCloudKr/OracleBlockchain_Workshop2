@@ -1,8 +1,7 @@
 # 샘플 체인코드 배포 및 테스트 (Balance Transfer) #
 -----
 ## 사전 준비사항 ##
-+ Oracle Blockchain Platform Ip Address - 강사 제공
-+ 이전 Lab인 CarDealer Lab을 완료하거나, BlockChain Platform에서 생성한 인스턴스 필요
++ 이전 Lab에서 생성한 BlockChain Platform 인스턴스 필요
 
 ## 소개 ##
 
@@ -18,8 +17,9 @@ A와 B 두 사람의 계좌에 잔고(balance)를 조회하고, 계좌이체를 
 
 DetroitAuto의 Dashboard Console에 접속해서 메뉴중에 **Developer Tools**를 클릭합니다.
 여기에서는 Chaincode 개발에 도움이 되는 오라클 Document에 대한 Link와 설명을 제공합니다.
-
 왼쪽 메뉴에서 **Samples**를 클릭합니다.
+![](images/goto_sample.png)
+
 바로 테스트 해볼 수 있는 Sample인 Balance Transfer와 Car Dealer를 제공하고 있습니다.
 이번 Lab에서는 **Balance Transfer**를 테스트 할 예정입니다.
 **Install** 버튼을 클릭해서 바로 샘플 체인코드를 배포해 보도록 하겠습니다.
@@ -31,6 +31,7 @@ DetroitAuto의 Dashboard Console에 접속해서 메뉴중에 **Developer Tools*
 
 이 체인코드는 처음 **Instantiate(객체화)** 될때 초기값을 입력받도록 작성되었는데, A와 B의 계좌잔고를 세팅하기 위해 **Int** 값을 받습니다. (예: A: 100, B: 200)
 
+Blockchain Platform Cloud에서는 4개의 Rest Proxy를 제공하고 있는데, 여기에서는 일단 restproxy1 1개만 선택하도록 하겠습니다.
 ![](images/balance_trans2.png)
 
 

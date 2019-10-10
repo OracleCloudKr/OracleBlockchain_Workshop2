@@ -7,8 +7,10 @@
 ![Alt text](https://monosnap.com/image/u5jqpRbcB4HjU15gUXMZoAOPlKDeQK.png)
 
 # Prerequisite 
-* 이 핸즈온을 수행하려면 미리 준비되어 있는 Oracle Blockchain Platform의 IP Address가 필요합니다. 만약 IP Address를 받지 못한 경우에는 강사에게 요청하시기 바랍니다.
+* 이 핸즈온을 수행하려면 Oracle Cloud 계정이 있어야 합니다.
 * Postman 툴 ([다운로드](https://www.getpostman.com/apps))
+## 0. 사전 준비
+[Oracle Cloud 에 로그인하기](./oraclecloud_login.md)
 
 ## 1. 블록체인 인스턴스 생성하기
 [Lab 100. 오라클 블록체인 인스턴스 생성하기 ](./Provisioning)

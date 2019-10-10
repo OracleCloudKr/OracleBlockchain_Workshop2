@@ -1,7 +1,7 @@
 # Car Dealer Lab #
 -----
 ## 사전 준비사항 ##
-+ Oracle Blockchain Platform Ip Address - 강사 제공
++ 이전 Lab에서 생성한 BlockChain Platform 인스턴스 필요
 + Postman 툴 ([다운로드](https://www.getpostman.com/apps))
 
 ## 소개 ##
