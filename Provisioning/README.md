@@ -26,13 +26,8 @@
 1. SamDealer를 생성하고 바로 JudeDealer라는 이름으로 Participant로 생성합니다. 위와 동일하게 'Create a new Network'를 체크 해제 합니다. Region은 'us-ashuburn-1'로 선택합니다.
 ![](images/prov5.png)
 
-2. 인스턴스가 생성이 되면 생성이 완료되었다는 메일이 자동으로 발송이 됩니다. 오른쪽에 햄버거 버튼을 클릭하면 해당 인스턴스의 콘솔로 이동할 수 있는 Blockchain Console 이 표시됩니다.
-![](images/prov6.png)
+2. 인스턴스 생성은 5분 정도 소요됩니다. 
+![](images/finish.png)
 
-1. 새로운 창으로 해당 블록체인 인스턴스를 관리할 수 있는 Dahshboard Console이 열리게 됩니다.
-![](images/prov7.png)
-
-1. SamDealer와 JudeDealer의 콘솔을 열어보면 아래와 같이 조금 다른 형태의 화면이 보이게 됩니다. 앞에서 인스턴스를 생성할때 Network를 체크한 Founder의 경우에는 자체적으로 동작하게 되지만, JuderDealer와 SamDealer는 체크를 해제 했습니다. 이는 자체적인 네트워크를 생성하지 않은 Participant로서 반드시 Founder에 Join을 해야만 동작을 합니다. 이 부분은 이후 Lab에서 구성해 보도록 하겠습니다.
-![](images/prov8.png)
 ---
 [이전 Lab으로 이동](../README.md)

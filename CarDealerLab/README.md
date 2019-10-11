@@ -2,6 +2,7 @@
 -----
 ## 사전 준비사항 ##
 + 이전 Lab에서 생성한 BlockChain Platform 인스턴스 필요
++ node.js 설치([다운로드](https://nodejs.org/ko/download/))
 + Postman 툴 ([다운로드](https://www.getpostman.com/apps))
 
 ## 소개 ##

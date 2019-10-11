@@ -14,22 +14,21 @@
     | samchannel   | SamDealer | ReaderWriter|
     | judechannel  | JudeDealer| ReaderWriter| 
     
+1. 먼저 samchannel을 생성합니다. 이때 SamDealer를 체크하셔야 하고, 해당 채널에 Join할 DetroitAuto의 peer를 두 개(peer0,peer1) 모두 선택합니다.
     ![](images/create_newchannel.png)
 
 3. 한번 생성된 채널은 삭제할 수 없기 때문에, 이름 생성시 주의하시기 바랍니다. 다시 한번 확인한 후에 Yes를 누릅니다.
 ![](images/create_newchannel2.png)
 
-4. JudeChannel도 생성합니다.
+4. JudeChannel도 생성합니다. 이때도 JudeDealer를 선택하고 peer를 두개 모두 선택합니다.
 
 ![](images/create_newchannel3.png)
-
-1. 두 개의 채널을 모두 생성 한 후에 다음 단계로 넘어갑니다.
 
 ## B. Participant(딜러) nodes에서 채널에 참가하기 (**JudeDealer** 먼저 수행합니다.)
 앞에서 만든 채널은 Founder쪽에 각각의 딜러들이 참여할 수 있다는 정보만을 입력한 것이므로 현재는 아직 참여가 되어 있지 않은 상태로, Detroit Auto의 피어 노드만 포함되어 있습니다. 딜러들은 참여하는 Peer가 없으므로 이 채널에서 트랜잭션을 만들거나 트랜잭션을 볼 수 없습니다.
     
 1. 생성된 채널에 참여하려면 Participant Org의 콘솔에 액세스하십시오. 먼저 JudeDealer 콘솔로 이동합니다.
-**Nodes** 탭을 클릭하여 각 피어(peer0)에 대하여 햄버거 메뉴를 클릭 한 다음 **Join New Channels**를 선택하십시오.
+**Nodes** 탭을 클릭하여 각 피어(peer0,peer1)에 대하여 햄버거 메뉴를 클릭 한 다음 **Join New Channels**를 선택하십시오.
 ![](images/participant_node.png)
 
 2. 채널 이름을 묻는 대화 상자가 표시됩니다. 조인할 채널명은 어떤 Org에서 작업하냐에 땨라 달라집니다. 다음 표를 보고 Org와 Channel을 잘 선택한 다음 **Join**을 클릭하십시오.
