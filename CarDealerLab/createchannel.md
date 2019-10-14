@@ -7,7 +7,7 @@
 1. 먼저 **Founder Org(detroitauto)** 의 콘솔에서 **Channels** 탭으로 이동하십시오. 기본적으로 생성된 default 채널이 있습니다. 채널을 생성하기 위해 **Create a New Channel**를 클릭하십시오
 ![](images/channel_main.png)
 
-2. **samchannel**과 **judechannel** 두개의 채널을 만들면 됩니다. 각 두개의 채널에 대해 **ReaderWriter**가 포함되어 있고 Detroit Auto Peer의 피어가 모두 채널에 가입되어 있는지 확인하십시오.
+2. **samchannel**과 **judechannel** 두개의 채널을 만들면 됩니다. 각 두개의 채널에 대해 **ReaderWriter**가 포함되어 있고 DetroitAuto Peer의 모든 피어가 모두 채널에 가입되어 있는지 확인하십시오. Dealer는 각각의 채널을 갖게 되며, 제조사인 DetroitAuto는 양 채널에 같이 가입하게 됩니다.
     
     | Channel Name | MSP ID    | ACL         |
     | ------------ | --------- | ----------- |

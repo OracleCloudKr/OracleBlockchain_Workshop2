@@ -26,18 +26,15 @@
 
 # Lab 시작
 
-## 1. Multi-party Network 구성하기
-
-### A. [Founder에 Participant 조직(Organization)을 Join하기](joinorg.md)
-
-### B. [Channel 생성하기](createchannel.md)
-
+## 1. [Founder에 Participant 조직(Organization)을 Join하기](joinorg.md)
 ---
-## 2. [체인코드 배포하기](chaincode_deploy.md)
+## 2. [Channel 생성하기](createchannel.md)
 ---
-## 3. [Sample Web App 준비하기](create_sampleapp.md)
+## 3. [체인코드 배포하기](chaincode_deploy.md)
 ---
-## 4. [Web App 에서 Blockchain 호출하기](invoke_blockchain.md)
+## 4. [Sample Web App 준비하기](create_sampleapp.md)
+---
+## 5. [Web App 에서 Blockchain 호출하기](invoke_blockchain.md)
 
 -----
 

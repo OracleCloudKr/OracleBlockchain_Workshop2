@@ -1,5 +1,5 @@
 # Founder에 Participant Join 하기
-### A. Founder에 JudeDealer Participant 조직(Organization)을 Join하기
+## A. Founder(DetroitAuto)에 JudeDealer와 SamDealer를 Join하기
 1. 인스턴스가 생성이 되면 생성이 완료되었다는 메일이 자동으로 발송이 됩니다. 오른쪽에 햄버거 버튼을 클릭하면 해당 인스턴스의 콘솔로 이동할 수 있는 Blockchain Console 이 표시됩니다.
 ![](images/prov6.png)
 
@@ -41,15 +41,16 @@
 4.  Founder에도 참가자인 **JudeDealer**와 **SamDealer**를 추가해 주어야 합니다. DetroitAuto 콘솔의 Network 탭으로 이동해서 **Add Organizations** 버튼을 클릭합니다.
 ![](images/founder_addorg.png)
 
-1.  **Upload Organization Certificates** 버튼을 클릭한 후 앞에서 다운로드 한 **JudeDealer-certificates.json** 파일을 선택합니다.
+1.  **Upload Organization Certificates** 버튼을 클릭합니다.
 ![](images/founder_addorg2.png)
 
-11. 앞에서 다운로드 받은 SamDealer-certificates.json 파일을 선택합니다.
+11. 앞에서 다운로드 받은 **SamDealer-certificates.json** 파일을 선택합니다.
 ![](images/founder_addorg4.png)
-1. 플러스 버튼을 눌러 JudeDealer-certificates.json 파일도 한번에 같이 추가합니다.
+
+1. 플러스 버튼을 눌러 **JudeDealer-certificates.json** 파일도 한번에 같이 추가합니다. 이제 **Add** 버튼을 눌러서 등록합니다.
 ![](images/founder_addorg5.png)
 
-1. 두개의 Participant가 정상적으로 추가되었습니다.
+1. 두 개의 Participant가 정상적으로 추가되었습니다.
 ![](images/founder_addorg6.png)
 ---
 [이전 Lab으로 이동](README.md)
