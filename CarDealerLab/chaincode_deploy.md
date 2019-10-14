@@ -4,7 +4,7 @@
 
 이 Lab에서 사용하는 Chaincode는 golang (GO) 으로 작성 되었으며, 미리 준비된 carTrace.zip를 이용하여 Deploy를 수행하게 됩니다.
 
-[carTrace.go.zip 다운로드](https://github.com/OracleCloudKr/OracleBlockchain_Workshop/raw/master/CarDealerLab/artifacts/carTrace.go.zip)
+[carTrace.go.zip 다운로드](https://github.com/OracleCloudKr/OracleBlockchain_Workshop2/raw/master/CarDealerLab/artifacts/carTrace.go.zip)
 
 ### A. Founder에 체인코드 인스톨 & 초기화 
 
@@ -26,7 +26,7 @@
 
 > Chaincode Name : **carTrace** <br/>
 > Version : **v1** <br/>
-> Target Peers : peer0 
+> Target Peers : peer0, peer1 
 
 ![](images/deploy_chaincode3.png)
 
@@ -39,7 +39,7 @@
 * 체인 코드를 인스턴스화 할 채널을 선택하십시오.
 * 채널에 참여할 로컬 Peer를 선택하십시오.
 * 보통은 기본 endorse 정책이 적절할 수도 있지만, 여기서는 Transaction이 2 개의 조직 중에서 2 개가 서명해야 하는 정책을 선택합니다.
-* **initial parameter 변수는 기본값으로 남겨 두어야 합니다**. 이 특정 체인 코드는 매개 변수를 요구하거나 사용하지 않으며 일시적인 맵이 필요 없습니다.
+* **initial parameter 변수는 기본값으로 남겨 둡니다.** 이 특정 체인 코드는 매개 변수를 요구하거나 사용하지 않으며 일시적인 맵이 필요 없습니다.
 
 ![](images/deploy_chaincode4.png)
 
@@ -50,9 +50,11 @@ Endorsement(검증) 를 어느 Org, 어느 peer에서 할 것인지를 선택하
 이 검증을 수행할 때 Siged by 2 of 2 Organizations above 는 2개의 Org중 2개가 검증에 통과하면 성공을 의미한다고 하는 설정입니다.|
 ~~~
        
-그리고 **다음**을 클릭하십시오. 이 과정은 다소 시간이 걸립니다.
-
+다음 단계는 이 체인코드를 노출시킬 Rest Proxy를 선택하는 단계입니다. Oracle Blochchain Cloud Platform에는 현재 4개의 proxy를 제공하고 있으며, 이 중에서 복수개를 선택을 해서 노출 시킬 수 있습니다. 이 Lab에서는 restproxy1 만 선택해서 진행하도록 하겠습니다. 그리고 어떤 peer들을 restproxy에 노출시킬 지를 선택합니다.
 ![](images/deploy_chaincode5.png)
+
+그리고 **다음**을 클릭하십시오. 이 과정은 다소 시간이 걸립니다.
+![](images/deploy_chaincode6.png)
 
 체인 코드는 이제 설정되었고, Founder 인 Detroit Auto의 **JudeChannel**에서 실행됩니다. 
 
@@ -68,12 +70,13 @@ Endorsement(검증) 를 어느 Org, 어느 peer에서 할 것인지를 선택하
 
 ### 2. Participant에 체인코드 인스톨과 초기화 
    
-Participant의 각 콘솔에서 **Chaincodes** 탭으로 이동하십시오. 이번에는 체인 코드를 배포 할 때 체인 코드가 이미 Founder에 의해 채널에서 인스턴스화 되었으므로 Peer에 체인 코드만 설치하면 됩니다. 이렇게 하려면 체인 코드 배포의 **Advanced** 모드에서 하셔야 합니다.
+Participant의 각 콘솔에서 **Chaincodes** 탭으로 이동하십시오. 
+![](images/participant_deploy_chaincode1.png)
+
+체인 코드를 배포 할 때 체인 코드가 이미 Founder에 의해 채널에서 인스턴스화 되었으므로 Peer에 체인 코드만 설치하면 됩니다. 이렇게 하려면 체인 코드 배포의 **Advanced** 모드에서 하셔야 합니다.
+![](images/participant_deploy_chaincode2.png)
 
 **Install Chaincode** 단계에서 동일한 체인 코드 zip 파일을 업로드하십시오.
-
-![](images/participant_deploy_chaincode1.png)
-![](images/participant_deploy_chaincode2.png)
 
  체인 코드의 이름과 버전이 Founder 에서 제공 한 이름과 동일하고 이 Org의 Peer 각각이 "Target Peers" 선택 항목에 포함되어 있는지 확인하십시오. Next 버튼을 누릅니다.
 
