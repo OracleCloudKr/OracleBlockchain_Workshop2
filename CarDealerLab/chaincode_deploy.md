@@ -68,6 +68,12 @@ Endorsement(검증) 를 어느 Org, 어느 peer에서 할 것인지를 선택하
 
 **인스턴스화(Instantiate)** 를 클릭하십시오. 이 과정은 다소 시간이 걸릴 수 있습니다.
 
+JudeChannel에 Deploy를 할 때는 Rest Proxy를 선택했습니다만, SamChannel에서는 이 과정을 Nodes 탭에서 개별로 설정해야 합니다. Nodes 탭으로 이동해서 restproxy1의 오른쪽 아이콘을 선택하고 Edit Configuration을 클릭합니다.
+![](images/exportto_rest1.png)
+
+기존에는 judechannel만 생성이 되어 있는 것을 확인하 실 수 있습니다. + 버튼을 눌러서 samchannel을 추가로 선택합니다. carTrace와 peer0, peer1을 선택한 후 Submit 버튼을 누르면 rest proxy에 samchannel에 배포되어 있는 체인코드가 노출이 되게 됩니다.
+![](images/exportto_rest2.png)
+
 ### 2. Participant에 체인코드 인스톨과 초기화 
    
 Participant의 각 콘솔에서 **Chaincodes** 탭으로 이동하십시오. 
