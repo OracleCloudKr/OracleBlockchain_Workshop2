@@ -6,13 +6,15 @@
 
 ### 2. 준비된 web application 다운로드 하기
 node.js 용 web application ([다운로드](https://github.com/OracleCloudKr/OracleBlockchain_Workshop2/raw/master/CarDealerLab/artifacts/auto_webapp.zip))
+위 파일을 다운로드 한후 압축을 풉니다.
 
 ### 3. 실행하기
-1) 압축을 푼 후 auto_webapp/bin 디렉토리로 이동한 후 run을 (윈도우는:run.cmd, 맥은 터미널에서 run.sh)를 실행합니다.
+1) 터미널을 엽니다. 윈도우는 cmd를 실행합니다. 위 다운로드 받은 경로인 auto_webapp/bin 디렉토리로 이동한 후 터미널 창에 다음을 입력합니다.<br>
+    node bcshol<br>
 윈도우의 경우 방화벽 오픈을 위해 다음과 같은 메세지가 나오게 되는데 이때 액세스 허용을 눌러 줍니다.
 ![](images/firewall.png)
 
-2) 화면에서 다음과 같이 나오게 되면 8000 포트로 web application이 정상적으로 Listen하며 서비스가 되게 됩니다.<br>
+1) 화면에서 다음과 같이 나오게 되면 8000 포트로 web application이 정상적으로 Listen하며 서비스가 되게 됩니다.<br>
 PORT: 8000, PROTOCOL: http
 
 3) 이제 브라우저를 열고 해당 포트로 접속해 봅니다.
