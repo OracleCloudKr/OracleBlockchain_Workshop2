@@ -3,7 +3,6 @@
 ## 사전 준비사항 ##
 + 이전 Lab에서 생성한 BlockChain Platform 인스턴스 필요
 + node.js 설치([다운로드](https://nodejs.org/ko/download/))
-+ Postman 툴 ([다운로드](https://www.getpostman.com/apps))
 
 ## 소개 ##
 이번 Lab은 Car Dealer 회사에서 Oracle BlockChain Platform을 활용하여 자동차 매매에 투명성을 확보할 수 있도록 해주는 Lab 입니다.
