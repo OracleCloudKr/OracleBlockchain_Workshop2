@@ -6,7 +6,7 @@
 
 [carTrace.go.zip 다운로드](https://github.com/OracleCloudKr/OracleBlockchain_Workshop2/raw/master/CarDealerLab/artifacts/carTrace.go.zip)
 
-### A. Founder에 체인코드 인스톨 & 초기화 
+## A. Founder에 체인코드 인스톨 & 초기화 
 
 체인 코드를 설치하려면 Founder Org의 콘솔에서 **Chaincodes**탭으로 이동 한 다음 **Deploy a New Chaincode** 버튼을 클릭하십시오. 여기에서 로컬 컴퓨터에서 가져 오거나, 자동화 된 빌드 프로세스의 마지막 단계인 Rmote URL을 참조하여 체인 코드를 업로드 할 수 있습니다.
 
@@ -19,28 +19,23 @@
     주의 : 체인 코드가 설치된 모든 Org에서 유일하게 유지되므로 체인 코드 이름에 주의하십시오.
 
 
-첫 번째 화면은 다음과 같이 나오게 됩니다.
-
+1. 첫 번째 화면은 다음과 같이 나오게 됩니다.
 ![](images/deploy_chaincode1.png)
 ![](images/deploy_chaincode2.png)
 
-> Chaincode Name : **carTrace** <br/>
-> Version : **v1** <br/>
-> Target Peers : peer0, peer1 
-
+2. > Chaincode Name : **carTrace** <br/>
+   > Version : **v1** <br/>
+   > Target Peers : peer0, peer1 
 ![](images/deploy_chaincode3.png)
-
-체인 코드를 Peer에 설치하려면 **Next**를 클릭하십시오. 
+3. 체인 코드를 Peer에 설치하려면 **Next**를 클릭하십시오. 
     
-성공 메시지가 나오게 되면, 체인 코드를 '인스턴스화'하라는 메시지가 나타나게 되는데, 이 단계는 체인 코드를 채널에 넣는 단계입니다. 
-
+4. 성공 메시지가 나오게 되면, 체인 코드를 '인스턴스화'하라는 메시지가 나타나게 되는데, 이 단계는 체인 코드를 채널에 넣는 단계입니다. <br>
 이 단계에서 다음을 수행해야 합니다.
 
 * 체인 코드를 인스턴스화 할 채널을 선택하십시오.
 * 채널에 참여할 로컬 Peer를 선택하십시오.
 * 보통은 기본 endorse 정책이 적절할 수도 있지만, 여기서는 Transaction이 2 개의 조직 중에서 2 개가 서명해야 하는 정책을 선택합니다.
 * **initial parameter 변수는 기본값으로 남겨 둡니다.** 이 특정 체인 코드는 매개 변수를 요구하거나 사용하지 않으며 일시적인 맵이 필요 없습니다.
-
 ![](images/deploy_chaincode4.png)
 
 ~~~
@@ -50,59 +45,59 @@ Endorsement(검증) 를 어느 Org, 어느 peer에서 할 것인지를 선택하
 이 검증을 수행할 때 Siged by 2 of 2 Organizations above 는 2개의 Org중 2개가 검증에 통과하면 성공을 의미한다고 하는 설정입니다.|
 ~~~
        
-다음 단계는 이 체인코드를 노출시킬 Rest Proxy를 선택하는 단계입니다. Oracle Blochchain Cloud Platform에는 현재 4개의 proxy를 제공하고 있으며, 이 중에서 복수개를 선택을 해서 노출 시킬 수 있습니다. 이 Lab에서는 restproxy1 만 선택해서 진행하도록 하겠습니다. 그리고 어떤 peer들을 restproxy에 노출시킬 지를 선택합니다.
+5. 다음 단계는 이 체인코드를 노출시킬 Rest Proxy를 선택하는 단계입니다. Oracle Blochchain Cloud Platform에는 현재 4개의 proxy를 제공하고 있으며, 이 중에서 복수개를 선택을 해서 노출 시킬 수 있습니다. 이 Lab에서는 restproxy1 만 선택해서 진행하도록 하겠습니다. 그리고 어떤 peer들을 restproxy에 노출시킬 지를 선택합니다.
 ![](images/deploy_chaincode5.png)
 
-그리고 **다음**을 클릭하십시오. 이 과정은 다소 시간이 걸립니다.
+6. 그리고 **다음**을 클릭하십시오. 이 과정은 다소 시간이 걸립니다.
 ![](images/deploy_chaincode6.png)
-
 체인 코드는 이제 설정되었고, Founder 인 Detroit Auto의 **JudeChannel**에서 실행됩니다. 
 
-두 번째 채널인 **SamChannel**에서도 이 체인 코드를 실행하려면 수동으로 인스턴스화 해야 합니다. 이렇게 하려면 설치된 carTrace를 확장하고 설치된 버전 (v1)에 대한 햄버거 메뉴를 클릭 한 다음 **Instantiate**를 선택하십시오.
-
+7. 두 번째 채널인 **SamChannel**에서도 이 체인 코드를 실행하려면 수동으로 인스턴스화 해야 합니다. 이렇게 하려면 설치된 carTrace를 확장하고 설치된 버전 (v1)에 대한 햄버거 메뉴를 클릭 한 다음 **Instantiate**를 선택하십시오.
 ![](images/instantiate_to_channel2.png)
 
-이 화면에서 두 번째 채널을 선택하고 두 피어를 추가 한 다음 이전과 같이 endorsement 정책을 구성합니다.
-
+8. 이 화면에서 두 번째 채널을 선택하고 두 피어를 추가 한 다음 이전과 같이 endorsement 정책을 구성합니다.
 ![](images/instantiate_to_channel22.png)
 
-**인스턴스화(Instantiate)** 를 클릭하십시오. 이 과정은 다소 시간이 걸릴 수 있습니다.
+9. **인스턴스화(Instantiate)** 를 클릭하십시오. 이 과정은 다소 시간이 걸릴 수 있습니다.
 
-JudeChannel에 Deploy를 할 때는 Rest Proxy를 선택했습니다만, SamChannel에서는 이 과정을 Nodes 탭에서 개별로 설정해야 합니다. Nodes 탭으로 이동해서 restproxy1의 오른쪽 아이콘을 선택하고 Edit Configuration을 클릭합니다.
+10. JudeChannel에 Deploy를 할 때는 Rest Proxy를 선택했습니다만, SamChannel에서는 이 과정을 Nodes 탭에서 개별로 설정해야 합니다. Nodes 탭으로 이동해서 restproxy1의 오른쪽 아이콘을 선택하고 Edit Configuration을 클릭합니다.
 ![](images/exportto_rest1.png)
 
-기존에는 judechannel만 생성이 되어 있는 것을 확인하 실 수 있습니다. + 버튼을 눌러서 samchannel을 추가로 선택합니다. carTrace와 peer0, peer1을 선택한 후 Submit 버튼을 누르면 rest proxy에 samchannel에 배포되어 있는 체인코드가 노출이 되게 됩니다.
+11. 기존에는 judechannel만 생성이 되어 있는 것을 확인하 실 수 있습니다. + 버튼을 눌러서 samchannel을 추가로 선택합니다. carTrace와 peer0, peer1을 선택한 후 Submit 버튼을 누르면 rest proxy에 samchannel에 배포되어 있는 체인코드가 노출이 되게 됩니다.
 ![](images/exportto_rest2.png)
 
-### 2. Participant에 체인코드 인스톨과 초기화 
+## B. Participant에 체인코드 인스톨과 초기화 
    
-Participant의 각 콘솔에서 **Chaincodes** 탭으로 이동하십시오. 
+1. Participant의 각 콘솔에서 **Chaincodes** 탭으로 이동하십시오. 
 ![](images/participant_deploy_chaincode1.png)
 
-체인 코드를 배포 할 때 체인 코드가 이미 Founder에 의해 채널에서 인스턴스화 되었으므로 Peer에 체인 코드만 설치하면 됩니다. 이렇게 하려면 체인 코드 배포의 **Advanced** 모드에서 하셔야 합니다.
+2. 체인 코드를 배포 할 때 체인 코드가 이미 Founder에 의해 채널에서 인스턴스화 되었으므로 Peer에 체인 코드만 설치하면 됩니다. 이렇게 하려면 체인 코드 배포의 **Advanced** 모드에서 하셔야 합니다.
 ![](images/participant_deploy_chaincode2.png)
 
-**Install Chaincode** 단계에서 동일한 체인 코드 zip 파일을 업로드하십시오.
-
+3. **Install Chaincode** 단계에서 동일한 체인 코드 zip 파일을 업로드하십시오.<br>
  체인 코드의 이름과 버전이 Founder 에서 제공 한 이름과 동일하고 이 Org의 Peer 각각이 "Target Peers" 선택 항목에 포함되어 있는지 확인하십시오. Next 버튼을 누릅니다.
-
 ![](images/participant_deploy_chaincode3.png)
 
-인스턴스화는 Org 나 peer가 아닌 채널에 종속되기 때문에, 일단 체인 코드가 설치되면 인스턴스화 할 필요가 없습니다.  
+4. 인스턴스화는 Org 나 peer가 아닌 채널에 종속되기 때문에, 일단 체인 코드가 설치되면 인스턴스화 할 필요가 없습니다.  
 **Close** 버튼을 눌러 체인 코드 인스턴스화 단계에서 취소하십시오. 
-
 ![](images/participant_deploy_chaincode4.png)
 
-체인 코드 이름 옆에 있는 작은 화살표를 클릭하여 체인 코드 항목을 확장하고 이미 인스턴스화 된 채널이 있음을 확인할 수 있습니다. 1의 숫자가 보이지 않고 0으로 보일 경우 오른쪽 상단의 Refresh 버튼을 누릅니다.
-
+5. 체인 코드 이름 옆에 있는 작은 화살표를 클릭하여 체인 코드 항목을 확장하고 이미 인스턴스화 된 채널이 있음을 확인할 수 있습니다. 1의 숫자가 보이지 않고 0으로 보일 경우 오른쪽 상단의 Refresh 버튼을 누릅니다.
 ![](images/participant_deploy_chaincode5.png)
 
-### 3. JudeDealer 에 대해서도 동일하게 체인코드를 deploy 합니다. 
-위 Deploy 과정을 JudeDealer 콘솔에서 동일하게 수행합니다.
-
+## C. JudeDealer 에 대해서도 동일하게 체인코드를 deploy 합니다. 
+1. 위 Deploy 과정을 JudeDealer 콘솔에서 동일하게 수행합니다.
 ![](images/participant_deploy_chaincode6.png)
 
+1. Client에서 호출을 할때는 REST Proxy를 통해서 호출을 하게 되게 되는데, Proxy에서 각 peer로 Balancing을 하게 됩니다. 이때 여기에 등록이 되어 있지 않게 되면 request를 보내지 못하게 되므로 방금전에 추가해준 다른 Org의 peer들도 Rest Proxy에 등록을 하는 과정을 수행해야 합니다.
+   
+2. DetroitAuto의 Nodes탭에서 Restproxy1의 edit configuration을 선택하십시오.
+![](images/participant_export11.png)
+![](images/participant_export9.png)
 
+2. judechannel에는 JudeDealer의 peer들을 추가하고, samchannel에는 SamDealer들의 peer들을 추가합니다. 
+여기에서 추가를 하게 되면 chaincode호출시에 Detroit Auto의 rest proxy를 통해서 각 peer들에게 요청이 들어갈 수 있게 됩니다.
+![](images/participant_export10.png)
 ---
 
 [이전 Lab으로 이동](README.md)
