@@ -8,7 +8,7 @@
 
 # Prerequisite 
 * 이 핸즈온을 수행하려면 Oracle Cloud 계정이 있어야 합니다.
-* Postman 툴 ([다운로드](https://www.getpostman.com/apps))
+
 ## 0. 사전 준비
 [Oracle Cloud 에 로그인하기](./oraclecloud_login.md)
 
