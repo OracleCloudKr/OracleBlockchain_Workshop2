@@ -11,4 +11,4 @@
 ![](images/login3.png)
 
 ---
-[이전 Lab으로 이동](../README.md)
+[이전 Lab으로 이동](./README.md)
