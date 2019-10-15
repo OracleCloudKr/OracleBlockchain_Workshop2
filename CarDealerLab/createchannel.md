@@ -34,6 +34,7 @@
 2. 채널 이름을 묻는 대화 상자가 표시됩니다. 조인할 채널명은 어떤 Org에서 작업하냐에 땨라 달라집니다. 다음 표를 보고 Org와 Channel을 잘 선택한 다음 **Join**을 클릭하십시오.
 ![](images/part_join_channel1.png)
 ![](images/part_join_channel2.png)    
+
     | Participant Org | MSP ID     | 대상 Peer    |
     | --------------- | ---------- | ----------- |
     | SamDealer       | samchannel | peer0, peer1 |
