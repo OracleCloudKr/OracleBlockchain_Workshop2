@@ -73,6 +73,16 @@ Founder가 다른 Org를 Transaction 의 endorser로 포함 시키려면 어떤 
 7. 위 과정이 모두 정상적으로 완료되면 다른 Org의 Peer 노드가 Founder의 Nodes 목록에 나타나야 합니다. MSP(Membership Service Provider)를 통해 네트워크에 속한 조직을 추적할 수 있습니다.
 ![](images/participant_export8.png)
 
+1. Client에서 호출을 할때는 REST Proxy를 통해서 호출을 하게 되게 되는데, Proxy에서 각 peer로 Balancing을 하게 됩니다. 이때 여기에 등록이 되어 있지 않게 되면 request를 보내지 못하게 되므로 방금전에 추가해준 다른 Org의 peer들도 Rest Proxy에 등록을 하는 과정을 수행해야 합니다.
+   
+2. DetroitAuto의 Nodes탭에서 Restproxy1의 edit configuration을 선택하십시오.
+![](images/participant_export11.png)
+![](images/participant_export9.png)
+
+2. judechannel에는 JudeDealer의 peer들을 추가하고, samchannel에는 SamDealer들의 peer들을 추가합니다. 
+여기에서 추가를 하게 되면 chaincode호출시에 Detroit Auto의 rest proxy를 통해서 각 peer들에게 요청이 들어갈 수 있게 됩니다.
+![](images/participant_export10.png)
+
 ## C. Network구성 Review하기
 지금까지 구축한 네트워크에 대한 구성도를 Founder "Nodes" 탭으로 이동하여 확인할 수 있습니다. Dealer의 피어 노드뿐 아니라 Detroitauto 노드가 목록에 있는지 확인하십시오. <br>
 그런 다음 아래 그림의 빨간색으로 표시된 토폴로지 보기 버튼을 클릭하십시오.

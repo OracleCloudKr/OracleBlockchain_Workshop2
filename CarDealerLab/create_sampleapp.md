@@ -12,17 +12,32 @@ node.js 용 web application ([다운로드](https://github.com/OracleCloudKr/Ora
 윈도우의 경우 방화벽 오픈을 위해 다음과 같은 메세지가 나오게 되는데 이때 액세스 허용을 눌러 줍니다.
 ![](images/firewall.png)
 
-2) 화면에서 다음과 같이 나오게 되면 8000 포트로 web application이 정상적으로 Listen하며 서비스가 되게 됩니다.
+2) 화면에서 다음과 같이 나오게 되면 8000 포트로 web application이 정상적으로 Listen하며 서비스가 되게 됩니다.<br>
 PORT: 8000, PROTOCOL: http
 
 3) 이제 브라우저를 열고 해당 포트로 접속해 봅니다.
 http://localhost:8000/
-![](images/webapp_init.png)
 
 4) 오른쪽 상단의 동그라미 설정 버튼을 눌러 환경설정 화면으로 이동합니다.
+![](images/webapp_init.png)
 
-5) 먼저 REST API의 주소를 확인해야 합니다. DetroitAuto의 Console로 이동해서 Nodes 탭을 선택한 후 restproxy1의 주소를 복사합니다.
+1) 여기에서 REST Proxy Endpoint는 DetroitAuto에서 제공하는 REST Proxy의 주소를 입력해야 합니다.
+![](images/webapp_configure.png)
+
+1) 먼저 REST API의 주소를 확인하기 위해 DetroitAuto의 Console로 이동해서 Nodes 탭을 선택한 후 restproxy1의 주소를 복사합니다. 여기서 restproxy1은 제외하고 복사합니다.
 ![](images/check_restURL.png)
-1) 
+
+1) REST Proxy주소를 위에서 복사한 주소로 붙여 넣습니다. 이때 뒤에 공백이 들어가지 않도록 주의합니다.<br>
+    - REST Proxy Endpoint : REST API 주소입니다. 이 정보는 Founder Console(DetroitAuto) 에서 확인할 수 있습니다. 
+      - (Oracle Blockchain Cloud Service의 경우: `https://62C57E2D8944EBB48B1E6C5A28A461.blockchain.ocp.oraclecloud.com:443`)
+      - 주의: 위 주소에서 /restproxy1은 제외해야 합니다.
+    - Channel Name : 접속하고자 하는 채널 이름입니다. (예: **samchannel**, **judechannel**) 
+    - UserName : oracle cloud 접속 아이디 
+    - Password : 패스워드
+ - channel 이름은 samchannel로 설정해서 먼저 확인을 해보겠습니다. <br>
+ 
+![](images/webapp_configure2.png)
+
+이제 Application을 확인할 준비가 되었습니다.
 ---
 [이전 Lab으로 이동](README.md)
