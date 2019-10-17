@@ -22,11 +22,17 @@ A와 B 두 사람의 계좌에 잔고(balance)를 조회하고, 계좌이체를 
 
 1) 바로 테스트 해볼 수 있는 Sample인 Balance Transfer와 Car Dealer를 제공하고 있습니다.
 이번 Lab에서는 **Balance Transfer**를 테스트 할 예정입니다.
-**Install** 버튼을 클릭해서 바로 샘플 체인코드를 배포해 보도록 하겠습니다.
+**Install** 버튼을 클릭합니다.
+![](images/install_click.png)
+
+1) Balance Transfer 샘플 체인코드를 배포해 보도록 하겠습니다.
 배포할 Peer를 모두 선택합니다.
 ![](images/balance_trans1.png)
 
-2) 배포할 채널을 **default**로 선택합니다.<br>
+1) 배포가 완료되면 객체화를 해야 합니다. Instantiate 버튼을 클릭합니다.
+![](images/install_click2.png)
+
+2) 어떤 채널에 객체화를 할지를 선택하게 되는데 여기서는 기본적으로 생성이 되는 **default**로 선택합니다.<br>
 이 체인코드는 처음 **Instantiate(객체화)** 될때 초기값을 입력받도록 작성되었는데, A와 B의 계좌잔고를 세팅하기 위해 **Int** 값을 받습니다. (예: A: 100, B: 200)<br>
 Blockchain Platform Cloud에서는 4개의 Rest Proxy를 제공하고 있는데, 여기에서는 restproxy1 1개만 선택하도록 하겠습니다.
 ![](images/balance_trans2.png)
