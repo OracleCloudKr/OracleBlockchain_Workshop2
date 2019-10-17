@@ -39,7 +39,6 @@ Blockchain Platform Cloud에서는 4개의 Rest Proxy를 제공하고 있는데,
 
 1) invoke 버튼을 누른 후 퍕업창에서 Channel을 선택하고 Action명을 **Query A**로 선택해서 A의 잔고값을 조회합니다.<br>
 초기에 입력한 A의 값이 조회되는 것을 확인하실 수 있습니다.
-![](images/balance_trans3.png)
 ![](images/balance_transfer5.png)
 
 1) 이번에는 B의 계좌에서 A의 계좌로 계좌이체를 하는 메서드를 호출 해보록 하겠습니다.<br>
