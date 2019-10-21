@@ -90,12 +90,36 @@ Endorsement(검증) 를 어느 Org, 어느 peer에서 할 것인지를 선택하
 ![](images/participant_deploy_chaincode6.png)
 
 1. Client에서 호출을 할때는 REST Proxy를 통해서 호출을 하게 되게 되는데, Proxy에서 각 peer로 Balancing을 하게 됩니다. 이때 여기에 등록이 되어 있지 않게 되면 request를 보내지 못하게 되므로 방금전에 추가해준 다른 Org의 peer들도 Rest Proxy에 등록을 하는 과정을 수행해야 합니다.
-   
-2. DetroitAuto의 Nodes탭에서 Restproxy1의 edit configuration을 선택하십시오.
+
+## D. Participant의 peer에 배포된 정보를 다시 Founder에 추가하기
+이전 Lab에서 채널에 추가된 Participant의 peer들의 정보를  Founder에 보내는 작업을 했습니다. 하지만, Participant의 peer가 위에서 배포한 chaincode를 갖고 있는지에 대한 정보를 Founder에 다시 갱신해 줘야 합니다. 그래야 Endorsing 과정에서 다른 peer들에게 chaincode의 검증을 요청할 수 있게 됩니다.
+
+1. Participant Org에서 **Nodes** 탭으로 이동 한 다음 **Export / Import** 버튼을 클릭하여 노드 정보를 내보냅니다.
+![](images/participant_export1.png)
+
+2. Participant의 Peer(peer0,peer1)를 선택한 다음 **Export**를 클릭하고 결과 파일을 저장합니다.
+![](images/participant_export2.png)
+
+3. **Founder(DetroitAuto)** 화면의 **Node** 탭에서 **Export / Import** 버튼과 **Import** 옵션을 통해 Peer정보를 가져옵니다.
+![](images/participant_export3.png)
+
+4. SamDealer-exported-nodes.json 을 선택해서 열기 버튼을 누릅니다. Import 버튼을 누릅니다.
+![](images/participant_export4.png)
+
+1. JudeDealer에 대해서도 동일하게 반복 수행합니다. JudeDealer 콘솔->Nodes 탭을 선택하고 Export/Import Peers를 클릭한 후 Export 를 선택합니다.
+![](images/participant_export5.png)
+![](images/participant_export6.png)
+
+6. **Founder(DetroitAuto)** 화면의 **Node** 탭에서 **Export / Import** 버튼과 **Import** 옵션을 통해 Peer정보를 가져옵니다. JudeDealer-exported-nodes.json를 선택합니다.
+![](images/participant_export7.png)
+
+
+## E. Rest Proxy에 Participant의 peer 등록하기
+1. DetroitAuto의 Nodes탭에서 Restproxy1의 edit configuration을 선택하십시오.
 ![](images/participant_export11.png)
 ![](images/participant_export9.png)
 
-2. judechannel에는 JudeDealer의 peer들을 추가하고, samchannel에는 SamDealer들의 peer들을 추가합니다. 
+1. judechannel에는 JudeDealer의 peer들을 추가하고, samchannel에는 SamDealer들의 peer들을 추가합니다. 
 여기에서 추가를 하게 되면 chaincode호출시에 Detroit Auto의 rest proxy를 통해서 각 peer들에게 요청이 들어갈 수 있게 됩니다.
 ![](images/participant_export10.png)
 ---
