@@ -75,14 +75,49 @@ REST 호출을 실행할 때 두 가지 옵션이 있습니다.
 - Postman과 같은 Tool 사용 : ([다운로드](https://www.getpostman.com/apps))
 - 터미널에서 "curl" 명령 사용 (Windows에서는 curl 다운로드 필요 https://curl.haxx.se/download.html)
 
-([PostMan환경파일](https://raw.githubusercontent.com/OracleCloudKr/OracleBlockchain_Workshop2/master/CarDealerLab/artifacts/OBP_WORKSHOP_ENV.postman_environment.json))
+이번 Lab에서는 Postman툴([다운로드](https://www.getpostman.com/apps))을 통해 REST API들을 자동화해서 호출하는 방식으로 하게 됩니다.
 
-([PostMan collection](https://raw.githubusercontent.com/OracleCloudKr/OracleBlockchain_Workshop2/master/CarDealerLab/artifacts/OBP_Workshop.postman_collection.json))
+1. 먼저 detroitauto(Founder)에서 REST Proxy주소를 복사해 둡니다. 
+   아래 그림에서 가운데 붉은색으로 표시된 부분만 복사를 합니다. 
+    ![](images/init_ledger1.png)
 
-위 파일을 Download 한 후 Postman에 import를 하시면 Query를 위한 샘플용 request가 들어 있습니다.
+1. 데이터를 초기화하는 Postman 스크립트 파일은 아래의 주소에서 다운로드 합니다.
 
-1. 왼쪽 request들 가장 아래 부분에 Query Vehicle 이라는 request를 선택하십시오.
-![](images/postman_queryhistory.png)
+    [OBCS_Workshop.postman_collection.json](https://github.com/OracleCloudKr/Blockchain_Workshop/raw/master/CarDealerLab/artifacts/OBCS_Workshop.postman_collection.json)
+
+    [WORKSHOP_ENV.postman_environment.json](https://github.com/OracleCloudKr/Blockchain_Workshop/raw/master/CarDealerLab/artifacts/WORKSHOP_ENV.postman_environment.json)
+
+1. 위 2개의 json 파일 중 WORKSHOP_ENV.postman_environment.json을 여십시오.
+    그 중에서 아래에 value중 굵게 표시된 부분을 각자의 환경에 맞도록 수정합니다.
+    <pre>
+    <code>
+        {
+        "key": "resturl",
+        "value": "<b>xxxxxxxxxxxx</b>.blockchain.ocp.oraclecloud.com/restproxy1",
+        "description": "",
+        "enabled": true
+        },
+        {
+        "key": "cloudaccount",
+        "value": "<b>username@xxxx.com</b>",
+        "description": "",
+        "enabled": true
+        },
+        {
+        "key": "cloudpwd",
+        "value": "<b>xxxxxx</b>",
+        "description": "",
+        "enabled": true
+        }
+    </code>
+    </pre>
+1. 먼저 Postman을 실행한 후 import 버튼을 눌러 창을 띄우고, 위 두 개의 파일을 import 합니다.
+
+    ![](images/initledger1.png)
+
+1. 오른쪽 상단의 WORKSHOP_ENV 를 선택해서 환경파일을 적용합니다.
+   아래 그림과 같이 OBCS_Workshop이라고 하는 Collection이 만들어지고 Http Requests들이 모두 import 된 것을 확인합니다.
+![](images/initledger2.png)
 
 1. 오른쪽 입력파라미터 중 args로 위에서 사용한 차량번호 **car1234**를 입력합니다.
     send를 누르면 결과가 차량 history에 대한 결과가 json 형태로 반환됩니다.
