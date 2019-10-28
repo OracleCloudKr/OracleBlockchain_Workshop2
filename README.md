@@ -23,3 +23,5 @@
 
 ## 4. 체인코드 개발하기 ##
 [Lab 400. 샘플 체인코드 개발하기](./ChaincodeDev)
+
+## Oracle Blockchain Platform 소개자료([다운로드](https://github.com/OracleCloudKr/OracleBlockchain_Workshop2/raw/master/OracleBlockchainPlatform_publish.pdf))
